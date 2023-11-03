@@ -10,6 +10,7 @@ public class HumanGroup
     
     public HumanGroup()
     {
+        // initial parameters for human group upon creation
         this.population = 0;
         this.age = 0;
         this.isDisc = false;
@@ -21,6 +22,7 @@ public class HumanGroup
     
     public HumanGroup Clone()
     {
+        // creates a dummy human group based on a previously existing human group
         HumanGroup h = new HumanGroup();
         h.age = this.age;
         h.population = this.population;
@@ -33,6 +35,7 @@ public class HumanGroup
     
     public void Aging()
     {
+        // ages everyone in group by one, tracks years as apprentice or years teaching
         this.age += 1;
         if(this.isApp)
         {
@@ -46,7 +49,7 @@ public class HumanGroup
     
     public static Comparator<HumanGroup> ageComparator = new Comparator<HumanGroup>()
     {
-
+// sorts ages in order to train youngest first
         public int compare(HumanGroup o1, HumanGroup o2) 
         {
     			if (o1.age > o2.age) {
