@@ -146,7 +146,7 @@ public class driver
       for(HumanGroup g: group)
       {
         // for all groups, babies are made based on amount of people old enough to reproduce
-          if(g.age == Human.birthAge)
+          if(g.age == Human.birthAge || g.age == Human.birthAge+1)
           {
               totalBaby += g.population;
           }
